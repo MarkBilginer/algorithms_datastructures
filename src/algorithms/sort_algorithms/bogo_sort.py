@@ -27,6 +27,7 @@ def bogo_sort(values: list) -> list:
 	Takes O(infinity or unbounded) time. Finds the result with pure luck,
 	for a very long list, it might never find a solution.
 	Takes O((n+1)!) time for deterministic model.
+	Does not get closer to the solution each step.
 
 	O(1) space complexity
 	:param values: list containing numbers
@@ -49,9 +50,9 @@ def main():
 	print("Size of list is: %d" % len(numbers))
 
 	t1_start = time.perf_counter()
-	ineff_sorted = bogo_sort(numbers)
+	sorted = bogo_sort(numbers)
 	t1_stop = time.perf_counter()
-	print(ineff_sorted)
+	print(sorted)
 	print("Time elapsed: %d" % (t1_stop - t1_start))
 
 
