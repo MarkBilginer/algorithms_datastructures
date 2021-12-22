@@ -53,7 +53,7 @@ def main():
 	sorted = bogo_sort(numbers)
 	t1_stop = time.perf_counter()
 	print(sorted)
-	print("Time elapsed: %d" % (t1_stop - t1_start))
+	print(f"Time elapsed: {t1_stop - t1_start}")
 
 
 if __name__ == "__main__":

@@ -48,7 +48,7 @@ def main():
 	sorted_list = selection_sort(numbers)
 	t1_stop = time.perf_counter()
 	print(sorted_list)
-	print("Time elapsed: %d" % (t1_stop - t1_start))
+	print(f"Time elapsed: {t1_stop - t1_start}")
 	# todo maybe implement a better version of verify_sorted, which doesnt use recursion
 	# you need to disable this line if list is too long.
 	print(f"Is sorted? {verify_sorted_recursive(sorted_list)}")

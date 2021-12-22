@@ -1,4 +1,5 @@
 import random
+import time
 
 
 def merge_sort(l: list) -> list:
@@ -100,5 +101,8 @@ if __name__ == "__main__":
 	random.shuffle(l)
 	print(l)
 	print(verify_sorted(l))
+	t1_start = time.perf_counter()
 	l = merge_sort(l)
+	t1_stop = time.perf_counter()
+	print(f"Time elapsed: {t1_stop - t1_start}")
 	print(verify_sorted(l))

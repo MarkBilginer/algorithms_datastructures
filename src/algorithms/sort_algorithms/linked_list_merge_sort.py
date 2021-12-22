@@ -1,4 +1,5 @@
 import random
+import time
 from src.data_structures.linked_list import LinkedList
 
 
@@ -97,7 +98,10 @@ def main():
 	for i in test_list:
 		l.add(i)
 	print(l)
+	t1_start = time.perf_counter()
 	sorted_linked_list = merge_sort(l)
+	t1_stop = time.perf_counter()
+	print(f"Time elapsed: {t1_stop - t1_start}")
 	print(sorted_linked_list)
 
 
