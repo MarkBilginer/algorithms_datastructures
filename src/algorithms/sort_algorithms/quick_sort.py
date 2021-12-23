@@ -3,6 +3,17 @@ from src.helpful_functions.load import load_numbers, verify_sorted_recursive
 
 
 def quick_sort(values: list) -> list:
+	"""
+	Sort using quick_sort algorithm. where the pivot is the first element,
+	in the list provided in the parameter and in sublists created through
+	internal function operation. On average quick_sort produces closer to
+	the best case. Some quick_sort implementations choose the pivot,
+	randomly at each recursive call.
+	Best case O(nlogn)
+	Worst case O(n^2)
+	:param values: list to be sorted
+	:return: sorted list
+	"""
 	# base case
 	if len(values) <= 1:
 		return values
@@ -17,6 +28,14 @@ def quick_sort(values: list) -> list:
 
 
 def pivot_comparison_split(values: list) -> tuple[list, list]:
+	"""
+	Chooses a pivot, the first element of the list, and creates two
+	sublists, where one contains values smaller than, equal to the pivot,
+	and the pivot itself; where the other contains values strictly larger
+	than the pivot.
+	:param values: list to be split using a pivot comparison
+	:return: the two above-mentioned sublist as a tuple.
+	"""
 	pivot = values[0]
 	less_than_pivot = list()
 	greater_than_pivot = list()

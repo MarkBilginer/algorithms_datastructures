@@ -6,8 +6,8 @@ def selection_sort(values: list) -> list:
 	"""
 	An inefficient, slow, sorting algorithm. Better than bogo_sort.
 	Takes O(n^2) time.
-	:param values:
-	:return:
+	:param values: list containing values
+	:return: sorted list
 	"""
 	sorted_sublist = list()
 	minimum = int()

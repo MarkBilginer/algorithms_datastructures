@@ -13,6 +13,14 @@ def load_numbers(file_name: str) -> list:
 	return numbers
 
 
+def load_strings(file_name):
+	strings = []
+	with open(file_name) as f:
+		for line in f:
+			strings.append(line.rstrip())
+	return strings
+
+
 def verify_sorted_recursive(l: list) -> bool:
 	"""
 	Verify if the list is sorted.

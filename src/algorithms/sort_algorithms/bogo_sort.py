@@ -4,19 +4,6 @@ import time
 from src.helpful_functions.load import load_numbers
 
 
-def is_sorted(values: list) -> bool:
-	"""
-	Checks whether the list is sorted in ascending order.
-	Takes O(n) time to run.
-	:param values: a list containing numerbers
-	:return: true if sorted else false
-	"""
-	for index in range(len(values) - 1):
-		if values[index] > values[index + 1]:
-			return False
-	return True
-
-
 def bogo_sort(values: list) -> list:
 	"""
 	Very inefficient sorting algorithms, educational purposes only.
@@ -40,6 +27,19 @@ def bogo_sort(values: list) -> list:
 		attempts += 1
 	print(f"Bogo sort took {attempts} attempt/s, to solve the problem.")
 	return values
+
+
+def is_sorted(values: list) -> bool:
+	"""
+	Checks whether the list is sorted in ascending order.
+	Takes O(n) time to run.
+	:param values: a list containing numerbers
+	:return: true if sorted else false
+	"""
+	for index in range(len(values) - 1):
+		if values[index] > values[index + 1]:
+			return False
+	return True
 
 
 def main():
